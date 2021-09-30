@@ -149,5 +149,5 @@ def run():
     print("Game 3 analysis: ", analyze_game(game3))
 
 
-if __name == "__main__":
+if __name__ == "__main__":
     run()
