@@ -1,4 +1,5 @@
 from typing import Dict
+import os
 import chess.pgn
 from chess.engine import PovScore, Cp
 import io
@@ -144,9 +145,13 @@ game3 = '''[Event "Rated Bullet game"]
 
 def run():
     print("Analysing games: ")
-    print("Game 1 analysis: ", analyze_game(game1))
-    print("Game 2 analysis: ", analyze_game(game2))
-    print("Game 3 analysis: ", analyze_game(game3))
+    result_1 = analyze_game(game1)
+    result_2 = analyze_game(game2)
+    result_3 = analyze_game(game3)
+    print("Game 1 analysis: ", result_1)
+    print("Game 2 analysis: ", result_2)
+    print("Game 3 analysis: ", result_3)
+    os._exit(os.EX_OK)
 
 
 if __name__ == "__main__":
